@@ -3,15 +3,15 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/materimodulscreens/mystatefulwidget.dart';
 
-class Cibodas extends StatefulWidget {
-  const Cibodas({super.key});
+class LittleVenice extends StatefulWidget {
+  const LittleVenice({super.key});
 
   @override
-  State<Cibodas> createState() => _CibodasState();
+  State<LittleVenice> createState() => _LittleVeniceState();
 }
 
-class _CibodasState extends State<Cibodas> {
-@override
+class _LittleVeniceState extends State<LittleVenice> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -42,7 +42,7 @@ class _CibodasState extends State<Cibodas> {
 
                   image: const DecorationImage(
                     image: AssetImage(
-                        'assets/images/KebunRayaCibodas(1).jpg'), // Path benar
+                        'assets/images/Little_Venice(1).jpg'), // Path benar
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -71,7 +71,7 @@ class _CibodasState extends State<Cibodas> {
                                 //Nama WISATA
 
                                 Text(
-                                  'Kebun Raya Cibodas',
+                                  'Little Venice',
                                   style: TextStyle(
                                     height: 2,
                                     color: Colors.white,
@@ -96,7 +96,7 @@ class _CibodasState extends State<Cibodas> {
                                         width:
                                             4.0), // Jarak minimal antara ikon dan teks
                                     Text(
-                                      'Cipanas, Cibodas',
+                                      'Villa Estate-Kota Bunga, Cipanas',
                                       style: TextStyle(
                                         height: 1.5,
                                         color: const Color.fromARGB(
@@ -189,7 +189,7 @@ class _CibodasState extends State<Cibodas> {
 
                   SizedBox(height: 30.0),
                   Text(
-                    'Pengunjung bisa menikmati dua air terjun di Kebun Raya Cibodas yang memiliki area Rumah Kaca dan Konservatorium guna memfasilitasi pengunjung untuk mengenal lebih dalam tentang koleksi tanaman yang ada. Pengunjung bisa belajar berbagai hal, mulai dari cara menanam, memelihara, hingga merawat tanaman yang dipandu langsung oleh ahli dari kebun raya.',
+                    'Seperti namanya, Little Venice adalah tempat wisata yang meniru gaya kota Venezia di Italia. Kota ini terkenal banget sebagai salah satu destinasi liburan impian karena keindahannya dan juga keunikannya, karena sebagian kota seperti dibangun di atas laut sehingga menghasilkan banyak kanal-kanal air yang bisa ditelusuri dengan perahu kecil bernama gondola. Selain jalan-jalan dengan gondola ada banyak spot foto yang instagramable.',
                     style: TextStyle(
                       color: const Color.fromARGB(255, 116, 115, 115),
                     ),
@@ -210,14 +210,43 @@ class _CibodasState extends State<Cibodas> {
                     '1. Tempat parkir luas\n'
                     '2. Toilet\n'
                     '3. Masjid\n'
-                    '4. Cafe\n'
-                    '5. Tempat sampah\n'
-                    '6. Pusat informasi\n'
-                    '7. Restoran, food court, dan snack corner\n'
-                    '8. P3K\n'
-                    '9. Keamanan\n'
-                    '10. Spot foto yang unik dan instagramable\n'
-                    '11. Merchandise Store',
+                    '4. Tempat Bermain Anak\n'
+                    '5. Kolam Pancing\n'
+                    '6. Tempat sampah\n'
+                    '7. Arena Fantasi\n'
+                    '8. Restoran, food court, dan snack corner\n'
+                    '9. P3K\n'
+                    '10. Keamanan\n'
+                    '11. Spot foto yang unik dan instagramable\n'
+                    '12. Merchandise Store',
+                    style: TextStyle(
+                      color: const Color.fromARGB(255, 116, 115, 115),
+                    ),
+                  ),
+
+                  SizedBox(height: 30.0),
+                  Text(
+                    'WAHANA',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
+
+                  //WAHANA WISATA
+                  Text(
+                    '1. Foto Studio\n'
+                    '2. Gondola\n'
+                    '3. Jembatan\n'
+                    '4. Around The World\n'
+                    '5. Sewa Kostum\n'
+                    '6.Mississippi Boat\n'
+                    '7. Duck Ride \n'
+                    '8. Merry Go Round \n'
+                    '9. Bumper Boat \n'
+                    '10. Dragon Boat \n'
+                    '11. Taxi Boat \n',
                     style: TextStyle(
                       color: const Color.fromARGB(255, 116, 115, 115),
                     ),
@@ -235,16 +264,16 @@ class _CibodasState extends State<Cibodas> {
 
                   //BIAYA TIKET TARIF WISATA JAM OPERASIONAL
                   Text(
-                    'Jam Operasioanl : Senin-Jum’at pukul 08.00-16.00\n'
-                    '                       : Sabtu-Minggu dan hari libur nasional pukul 07.00-16.00\n'
-                    'Harga               : Weekday  Rp.15.000 & Weekend Rp.25.500',
+                    'Jam Operasioanl : Senin - Jumat, 09.00-16.30 \n'
+                    '                       : Sabtu - Minggu, 08.00-18.00\n'
+                    'Harga               : Weekday Rp60.000, Weekend Rp90.000',
                     style: TextStyle(
                       color: const Color.fromARGB(255, 116, 115, 115),
                     ),
                   ),
                   SizedBox(height: 20.0),
                   Text(
-                    'Keindahan Kebun Raya Cibodas',
+                    'Keindahan Little Venice',
                     textAlign: TextAlign.start,
                     style: TextStyle(
                       fontSize: 18.0,
@@ -271,7 +300,7 @@ class _CibodasState extends State<Cibodas> {
                         borderRadius: BorderRadius.circular(
                             20), // Menambahkan border radius
                         image: DecorationImage(
-                          image: AssetImage('assets/images/KebunRayaCibodas(2).jpg'),
+                          image: AssetImage('assets/images/Little_Venice(2).jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -282,22 +311,22 @@ class _CibodasState extends State<Cibodas> {
                         borderRadius: BorderRadius.circular(
                             20), // Menambahkan border radius
                         image: DecorationImage(
-                          image: AssetImage('assets/images/KebunRayaCibodas(3).jpg'),
+                          image: AssetImage('assets/images/Little_Venice(3).jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
                     ),
                     // Gambar ketiga dengan border radius
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.circular(
-                    //         20), // Menambahkan border radius
-                    //     image: DecorationImage(
-                    //       image: AssetImage('assets/images/Thenicepark(3).jpg'),
-                    //       fit: BoxFit.cover,
-                    //     ),
-                    //   ),
-                    // ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                            20), // Menambahkan border radius
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/Little_Venice(4).jpg'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -309,4 +338,3 @@ class _CibodasState extends State<Cibodas> {
     );
   }
 }
-

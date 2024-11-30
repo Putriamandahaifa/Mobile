@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:wisata_mobile_5/materimodulscreens/mystatefulwidget.dart';
+import 'package:flutter_app/materimodulscreens/mystatefulwidget.dart';
 
 class CIbereum extends StatefulWidget {
   const CIbereum({super.key});
@@ -16,10 +16,9 @@ class _CIbereumState extends State<CIbereum> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        
       ),
       backgroundColor: Colors.white,
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Padding(
@@ -33,14 +32,17 @@ class _CIbereumState extends State<CIbereum> {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withOpacity(0.5),
-                      offset: Offset(0, 3),
-                      blurRadius: 3,
-                      spreadRadius: 3,
+                      offset: Offset(0, 6),
+                      blurRadius: 4,
+                      spreadRadius: 4,
                     )
                   ],
+
+                  //ASSETS GAMBAR
+
                   image: const DecorationImage(
-                    image:
-                        AssetImage('assets/images/Cibeureum.jpg'), // Path benar
+                    image: AssetImage(
+                        'assets/images/Cibereum (1).jpg'), // Path benar
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -62,14 +64,49 @@ class _CIbereumState extends State<CIbereum> {
                               color: Colors.transparent,
                               borderRadius: BorderRadius.circular(15.0),
                             ),
-                            child: Text(
-                              'Curug Cibereum',
-                              style: const TextStyle(
-                                height: 2,
-                                color: Colors.white,
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
-                              ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment
+                                  .start, // Menyelaraskan ke kiri
+                              children: [
+                                //Nama WISATA
+
+                                Text(
+                                  'Cibereum',
+                                  style: TextStyle(
+                                    height: 2,
+                                    color: Colors.white,
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+
+                                Row(
+                                  // Membatasi Row ke ukuran kontennya
+                                  children: [
+                                    Icon(
+                                      Icons.location_pin, // Ikon peta
+                                      color: const Color.fromARGB(
+                                          255, 224, 223, 223),
+                                      size: 20.0, // Ukuran ikon
+                                    ),
+
+                                    //LOKASI WISATA
+
+                                    SizedBox(
+                                        width:
+                                            4.0), // Jarak minimal antara ikon dan teks
+                                    Text(
+                                      'Cibodas, Cianjur',
+                                      style: TextStyle(
+                                        height: 1.5,
+                                        color: const Color.fromARGB(
+                                            255, 224, 223, 223),
+                                        fontSize: 10.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -115,7 +152,170 @@ class _CIbereumState extends State<CIbereum> {
                   ],
                 ),
               ),
-            )
+            ),
+            SizedBox(height: 20.0),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+
+              //TULISAN DESKIPSI
+
+              child: Column(
+                textDirection: TextDirection.ltr,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  //overview
+                  Row(
+                    children: [
+                      Text(
+                        'Overview',
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20.0,
+                      ),
+                      Text(
+                        'Detail',
+                        style: TextStyle(
+                          color: const Color.fromARGB(255, 116, 115, 115),
+                        ),
+                      )
+                    ],
+                  ),
+
+                  // DESKRIPSI WISATA
+
+                  SizedBox(height: 30.0),
+                  Text(
+                    'Selain keindahan Curug atau Air Terjun Cibeureum, selama perjalanan menuju ke lokasi akan terhidang pemandangan alam yang indah dan eksotis. Tidak heran jika pengunjung menemukan berbagai jenis burung dan kera yang bergelantungan. Ada juga telaga biru dan rawa panyangcangan yang bisa dinikmati keindahannya selama perjalanan. Serta jembatan panjang yang terbuat dari batu buatan yang sering menjadi salah satu tempat favorit berfoto ria atau selfie selama perjalanan ke Curug Cibeureum ini.',
+                    style: TextStyle(
+                      color: const Color.fromARGB(255, 116, 115, 115),
+                    ),
+                  ),
+
+                  SizedBox(height: 30.0),
+                  Text(
+                    'Fasilitas',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
+
+                  //FASILITAS WISATA
+                  Text(
+                    '1. Tempat parkir luas\n'
+                    '2. Toilet\n'
+                    '3. Pasar\n'
+                    '4. Musolla\n'
+                    '5. Pos\n'
+                    '6. Tempat sampah\n'
+                    '7. Spot foto yang unik dan instagramable\n',
+                    style: TextStyle(
+                      color: const Color.fromARGB(255, 116, 115, 115),
+                    ),
+                  ),
+
+                  SizedBox(height: 30.0),
+                  Text(
+                    'WAHANA',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
+
+                  //WAHANA WISATA
+                  Text(
+                    '1. Telaga Biru\n',
+                    style: TextStyle(
+                      color: const Color.fromARGB(255, 116, 115, 115),
+                    ),
+                  ),
+
+                  SizedBox(height: 30.0),
+                  Text(
+                    'Jam Operasional & Tiket',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
+
+                  //BIAYA TIKET TARIF WISATA JAM OPERASIONAL
+                  Text(
+                    'Jam Operasioanl : Setiap hari07.00-14.00 \n'
+                    'Harga               :  Weekday: Rp16.000 Weekend Rp18.500',
+                    style: TextStyle(
+                      color: const Color.fromARGB(255, 116, 115, 115),
+                    ),
+                  ),
+                  SizedBox(height: 20.0),
+                  Text(
+                    'Keindahan Curug Cibereum',
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  SizedBox(height: 10.0),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                height: 400, // Adjust height as needed
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10.0,
+                  mainAxisSpacing: 10.0,
+                  children: [
+                    // Gambar pertama dengan border radius
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                            20), // Menambahkan border radius
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/Cibereum (2).jpg'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    // Gambar kedua dengan border radius
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                            20), // Menambahkan border radius
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/Telaga biru(1).jpg'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    // Gambar ketiga dengan border radius
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                            20), // Menambahkan border radius
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/Telaga biru(2).jpg'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 50.0),
           ],
         ),
       ),
